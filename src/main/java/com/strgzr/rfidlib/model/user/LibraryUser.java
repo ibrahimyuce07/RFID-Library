@@ -1,14 +1,11 @@
 package com.strgzr.rfidlib.model.user;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 @Table(name = "library_user")
-@Data
 public class LibraryUser {
 
     @Id
@@ -43,4 +40,115 @@ public class LibraryUser {
     @Column(name = "register_date")
     private LocalDateTime registerDate;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRfid() {
+        return rfid;
+    }
+
+    public void setRfid(String rfid) {
+        this.rfid = rfid;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
+
+    public boolean isBorrowStatus() {
+        return borrowStatus;
+    }
+
+    public void setBorrowStatus(boolean borrowStatus) {
+        this.borrowStatus = borrowStatus;
+    }
+
+    public LocalDateTime getLastBorrowTime() {
+        return lastBorrowTime;
+    }
+
+    public void setLastBorrowTime(LocalDateTime lastBorrowTime) {
+        this.lastBorrowTime = lastBorrowTime;
+    }
+
+    public LocalDateTime getLastReturnTime() {
+        return lastReturnTime;
+    }
+
+    public void setLastReturnTime(LocalDateTime lastReturnTime) {
+        this.lastReturnTime = lastReturnTime;
+    }
+
+    public int getBorrowCount() {
+        return borrowCount;
+    }
+
+    public void setBorrowCount(int borrowCount) {
+        this.borrowCount = borrowCount;
+    }
+
+    public int getReturnCount() {
+        return returnCount;
+    }
+
+    public void setReturnCount(int returnCount) {
+        this.returnCount = returnCount;
+    }
+
+    public int getPenalty() {
+        return penalty;
+    }
+
+    public void setPenalty(int penalty) {
+        this.penalty = penalty;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public LocalDateTime getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(LocalDateTime registerDate) {
+        this.registerDate = registerDate;
+    }
 }

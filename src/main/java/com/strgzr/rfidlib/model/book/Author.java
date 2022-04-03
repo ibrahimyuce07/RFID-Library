@@ -1,12 +1,9 @@
 package com.strgzr.rfidlib.model.book;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "author")
-@Data
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_seq")
@@ -16,5 +13,19 @@ public class Author {
     @Column(name = "name")
     private String name;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
